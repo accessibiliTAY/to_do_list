@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>To Do List</title>
+</head>
+
+<body ng-controller="MainController">
+  <h1> To Do List </h1>
+  <input type="text" ng-model="item" />
+  <br />
+<div>
+  <button ng-click="addClick()"> ADD </button>
+  <div ng-repeat="item in items">
+    <div class="entry">
+    {{item}}
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
