@@ -14,12 +14,23 @@
   <br />
 <div>
   <button ng-click="addClick()"> ADD </button>
-  <div ng-repeat="item in items">
-    <div class="entry">
+  <ul ng-repeat="item in items track by $index">
+    <li class="entry">
     {{item}}
-    </div>
+    <button ng-click="removeItem()">REMOVE</button>
+  </li>
+</ul>
   </div>
 </div>
+<!-- <div ng-repeat="finish in finishs">
+  {{item}}
+  <input type="radio" ng-model="item" ng-value="finish" />
+</div>
+<div>
+<h3>Completed :</h3>
+{{finish}}
+</div> -->
+
 </body>
 
 </html>
